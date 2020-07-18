@@ -42,10 +42,6 @@ TARGET_USES_64_BIT_BINDER := true
 TARGET_BOOTLOADER_BOARD_NAME := sdm660
 TARGET_NO_BOOTLOADER := true
 
-# Crypto
-TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/commonsys/cryptfs_hw
-TARGET_HW_DISK_ENCRYPTION := true
-
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 earlycon=msm_serial_dm,0xc170000
 BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3
@@ -84,18 +80,3 @@ TARGET_COPY_OUT_VENDOR := vendor
 # Recovery
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-
-# TWRP specific build flags
-RECOVERY_SDCARD_ON_DATA := true
-TARGET_RECOVERY_QCOM_RTC_FIX := true
-TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
-TW_EXCLUDE_DEFAULT_USB_INIT := true
-TW_EXTRA_LANGUAGES := true
-TW_INCLUDE_CRYPTO := true
-TW_INCLUDE_NTFS_3G := true
-TW_INCLUDE_RESETPROP := true
-TW_INPUT_BLACKLIST := "hbtp_vm"
-TW_MAX_BRIGHTNESS := 4095
-TW_SCREEN_BLANK_ON_BOOT := true
-TW_THEME := portrait_hdpi
-TW_USE_TOOLBOX := true
