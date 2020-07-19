@@ -3,7 +3,7 @@ For building TWRP for Xiaomi Redmi Note 5 Pro ONLY
 
 To compile
 
-. build/envsetup.sh && lunch omni_whyred-eng && make -j8 recoveryimage
+`export ALLOW_MISSING_DEPENDENCIES=true; . build/envsetup.sh; lunch omni_whyred-eng; mka recoveryimage`
 
 The Redmi Note 5 Pro (codenamed _"whyred"_) are high-end mid-range smartphones from Xiaomi.
 
